@@ -81,7 +81,7 @@ public:
 Values VariableKinds::runOnBlock(const CFGBlock *block, Values vals) {
   TransferFunctions TF(*this, vals);
 
-  if (const Stmt *term = block->getTerminator()) {
+  if (const Stmt *term = block->getTerminator().getStmt()) {
     stmtsToValues[term] = vals;
     TF.Visit(const_cast<Stmt*>(term));
   }
