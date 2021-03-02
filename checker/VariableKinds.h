@@ -100,7 +100,7 @@ public:
       valid = false;
       return;
     }
-    worklist = llvm::make_unique<Worklist>(*cfg);
+    worklist = std::make_unique<Worklist>(*cfg);
     worklist->enqueueBlock(&cfg->getEntry());
     llvm::BitVector everAnalyzedBlock(cfg->getNumBlockIDs());
     while (const CFGBlock *block = worklist->dequeue()) {

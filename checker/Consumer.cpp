@@ -244,7 +244,7 @@ private:
 
 std::unique_ptr<ASTConsumer> CreateInsertIntoDatabaseConsumer(
     Database &DB, ASTContext &Ctx, SourceManager &SM) {
-  return llvm::make_unique<InsertIntoDatabaseConsumer>(DB, Ctx, SM);
+  return std::make_unique<InsertIntoDatabaseConsumer>(DB, Ctx, SM);
 }
 
 } // end namespace clang

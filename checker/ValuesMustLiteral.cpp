@@ -181,7 +181,7 @@ public:
   }
 
   bool VisitMaterializeTemporaryExpr(const MaterializeTemporaryExpr *E) {
-    return Visit(E->GetTemporaryExpr());
+    return Visit(E->getSubExpr());
   }
 
   bool VisitParenExpr(const ParenExpr *E) {

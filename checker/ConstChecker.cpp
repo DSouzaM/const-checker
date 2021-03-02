@@ -29,8 +29,8 @@ namespace {
 class CheckFactory : public FrontendActionFactory {
 public:
   CheckFactory(Database &DB) : DB(DB) {}
-  FrontendAction *create() override {
-    return new InsertIntoDatabaseAction(DB);
+  std::unique_ptr<FrontendAction> create() override {
+    return std::make_unique<InsertIntoDatabaseAction>(DB);
   }
 private:
   Database &DB;

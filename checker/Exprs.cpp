@@ -135,7 +135,7 @@ public:
     Visit(E->getSubExpr());
   }
   void VisitMaterializeTemporaryExpr(const MaterializeTemporaryExpr *E) {
-    Visit(E->GetTemporaryExpr());
+    Visit(E->getSubExpr());
   }
   void VisitConditionalOperator(const ConditionalOperator *E) {
     Visit(E->getTrueExpr());

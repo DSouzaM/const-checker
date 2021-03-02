@@ -233,7 +233,7 @@ namespace clang {
 namespace immutability {
 
 Database::Database(unsigned CompileCommandID) {
-  Impl = llvm::make_unique<DatabaseImpl>();
+  Impl = std::make_unique<DatabaseImpl>();
 
   Impl->CompileCommandID = CompileCommandID;
 

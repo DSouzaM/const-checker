@@ -10,16 +10,7 @@ add_executable(const-checker
   Action.cpp
   Consumer.cpp
 )
-target_link_libraries(const-checker
-  clangAnalysis
-  clangAST
-  clangASTMatchers
-  clangBasic
-  clangFrontend
-  clangSerialization
-  clangTooling
-  clangConstCheckerDatabase
-  LLVM
-  pq
-)
+
+target_link_libraries(const-checker clang-cpp clangConstCheckerDatabase LLVM pq)
+
 install(TARGETS const-checker DESTINATION bin)
