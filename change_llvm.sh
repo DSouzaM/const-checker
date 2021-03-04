@@ -19,6 +19,10 @@ elif [[ $1 -eq "10" ]]; then
   sudo pacman -U https://archive.archlinux.org/packages/l/llvm-libs/llvm-libs-10.0.0-1-x86_64.pkg.tar.zst --noconfirm
   sudo pacman -U https://archive.archlinux.org/packages/l/llvm/llvm-10.0.0-1-x86_64.pkg.tar.zst --noconfirm
   sudo pacman -U https://archive.archlinux.org/packages/c/clang/clang-10.0.0-1-x86_64.pkg.tar.zst --noconfirm
+elif [[ $1 -eq "11" ]]; then
+  sudo pacman -U https://archive.archlinux.org/packages/l/llvm-libs/llvm-libs-11.0.0-1-x86_64.pkg.tar.zst --noconfirm
+  sudo pacman -U https://archive.archlinux.org/packages/l/llvm/llvm-11.0.0-1-x86_64.pkg.tar.zst --noconfirm
+  sudo pacman -U https://archive.archlinux.org/packages/c/clang/clang-11.0.0-1-x86_64.pkg.tar.zst --noconfirm
 else
   echo "Unknown version $1"
 fi

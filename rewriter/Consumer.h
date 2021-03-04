@@ -2,6 +2,7 @@
 #define CLANG_IMMUTABILITY_REWRITE_CONSUMER_H
 
 #include <clang/AST/ASTConsumer.h>
+#include <clang/Frontend/CompilerInstance.h>
 
 namespace clang {
 namespace immutability {

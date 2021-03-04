@@ -3,6 +3,7 @@
 #include "Exprs.h"
 
 #include <clang/AST/StmtVisitor.h>
+#include <clang/Basic/SourceManager.h>
 
 using namespace clang;
 using namespace immutability;
